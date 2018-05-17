@@ -34,4 +34,4 @@ function doit() {
 }
 
 // When embedded, trigger this automatically
-download(document.title + ".md", quote(getSelectionText()) + addReference());
+doit()
