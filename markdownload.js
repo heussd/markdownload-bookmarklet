@@ -27,6 +27,7 @@ function download(filename, text) {
 
 function quote(text) {
   text = text.replace(/\n+/g, '\n');
+  text = text.replace(/(\r\n|\n+|\r)/gm, '\n');
   return '> ' + text.replace(/\n/g, '\n>\n>');
 }
 
