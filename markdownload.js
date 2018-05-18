@@ -1,7 +1,11 @@
 function getSelectionText() {
     var text = "";
-    if (window.getSelection) {
-        text = window.getSelection().toString();
+    var selections = window.getSelection();
+    if (selections) {
+      text = selections.getRangeAt(0).toString();
+      for(var i=1; i<selections.rangeCount; i++) {
+        text += "\n\n[...]\n\n" + selections.getRangeAt(i)
+      }
     } else if (document.selection && document.selection.type != "Control") {
         text = document.selection.createRange().text;
     }
