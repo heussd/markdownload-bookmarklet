@@ -32,7 +32,7 @@ function quote(text) {
 }
 
 function addReference() {
-  return '\n\n[' + window.location.href  + '](' + window.location.href  + ')<br/>(Last access ' + (new Date().toISOString()) + ')';
+  return '\n\n[' + window.location.href  + '](' + window.location.href  + ')\n(Last access ' + (new Date().toISOString()) + ')';
 }
 
 function doit() {
