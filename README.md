@@ -1,3 +1,3 @@
 # markdownload-bookmarklet
 
-Downloads current text selection as markdown document.
+Downloads / copies current text selection as markdown document.
