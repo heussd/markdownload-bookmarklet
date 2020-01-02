@@ -1,13 +1,19 @@
 <html>
+    <style>
+        .highlight {background-color: yellow;}
+    </style>
 <title>Test title</title>
 <script src="markdownload.js"></script>
 
 <body>
   <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum malesuada est non rutrum. Sed vel nisl sit amet sem lobortis ultrices porta sed felis. Mauris eget turpis non justo aliquet condimentum. Donec vel ante ac mi tincidunt lobortis. Donec vitae nibh sollicitudin, sodales ligula id, tincidunt sem. Vivamus eu lobortis felis, vitae accumsan justo. Aenean sed metus tempus, venenatis eros maximus, tincidunt augue. Sed luctus urna sit amet nisi scelerisque dictum. Fusce et fringilla enim. Nullam fringilla metus ac risus ornare, quis sodales lacus congue.
+    <span annotation_id="asd" class="highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+  </p>
+  <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="highlight">Ut rutrum malesuada est</span> non rutrum. Sed vel nisl sit amet sem lobortis ultrices porta sed felis. Mauris eget turpis non justo aliquet condimentum. Donec vel ante ac mi tincidunt lobortis. Donec vitae nibh sollicitudin, sodales ligula id, tincidunt sem. Vivamus eu lobortis felis, vitae accumsan justo. Aenean sed metus tempus, venenatis eros maximus, tincidunt augue. Sed luctus urna sit amet nisi scelerisque dictum. Fusce et fringilla enim. Nullam fringilla metus ac risus ornare, quis sodales lacus congue.
 </p>
 <p>
-Suspendisse volutpat lorem ut posuere fermentum. In gravida ornare felis eget feugiat. Aenean purus leo, finibus et blandit at, commodo id turpis. Etiam finibus, justo eget interdum congue, tortor diam posuere diam, sit amet efficitur purus ex sed ipsum. Nulla consequat ante a ante vehicula, in hendrerit justo facilisis. Proin ullamcorper porttitor ex ac fermentum. Phasellus rutrum nulla sit amet justo lacinia, eu tempus tortor bibendum. Etiam scelerisque ante eu accumsan eleifend. Mauris pharetra efficitur fringilla.
+Suspendisse volutpat lorem ut posuere fermentum. In gravida ornare felis eget feugiat. Aenean purus leo, finibus et blandit at, <span class="highlight">commodo id turpis. Etiam finibus, justo eget interdum congue,</span> tortor diam posuere diam, sit amet efficitur purus ex sed ipsum. Nulla consequat ante a ante vehicula, in hendrerit justo facilisis. Proin ullamcorper porttitor ex ac fermentum. Phasellus rutrum nulla sit amet justo lacinia, eu tempus tortor bibendum. Etiam scelerisque ante eu accumsan eleifend. Mauris pharetra efficitur fringilla.
 </p>
 <p>
   Break Lines<br/><br/><br/>
@@ -15,6 +21,6 @@ Suspendisse volutpat lorem ut posuere fermentum. In gravida ornare felis eget fe
   Break Lines<br/>
   Break Lines<br/>
 </p>
-<a href="javascript:doit()">Click</a>
+<a href="javascript:markdownloadSelection()">Click</a>
 </body>
 </html>
