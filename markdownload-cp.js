@@ -69,8 +69,22 @@ function quote(text) {
   return '> ' + text.replace(/\n/g, '\n>\n>');
 }
 
+function getUrl() {
+  var url = window.location.href;
+  if (url.startsWith("https://app.getpocket.com/read/")) {
+    // Pocket mode, retrieve URL from a link named "View Original"
+    for(var i = 0, l=document.links.length; i<l; i++) {
+      var link = document.links[i];
+      if(link.text == "View Original" && link.href.startsWith("https://getpocket.com/redirect?url=")) {
+        return decodeURIComponent(link.href.substr(35));
+      }
+    }
+  }
+  return url;
+}
+
 function addReference() {
-  return '\n\n[' + window.location.href  + '](' + window.location.href  + ')\n(Last access ' + (new Date().toISOString()) + ')';
+  return '\n\n[' + getUrl()  + '](' + getUrl()  + ')\n(Last access ' + (new Date().toISOString()) + ')';
 }
 
 function markdowncopySelection() {
@@ -84,4 +98,4 @@ function markdownloadSelection() {
 
 // When embedded, trigger this automatically
 // markdowncopySelection()
-markdowncopySelection()
+markdowncopySelection();
