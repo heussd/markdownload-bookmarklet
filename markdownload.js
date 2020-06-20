@@ -84,7 +84,7 @@ function getUrl() {
 }
 
 function addReference() {
-  return '\n\n[' + getUrl()  + '](' + getUrl()  + ')\n(Last access ' + (new Date().toISOString()) + ')';
+  return '\n\n<' + getUrl()  + '> \n(Last access ' + (new Date().toISOString()) + ')';
 }
 
 function markdowncopySelection() {
